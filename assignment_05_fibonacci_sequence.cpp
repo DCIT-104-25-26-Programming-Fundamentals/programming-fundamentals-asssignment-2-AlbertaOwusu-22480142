@@ -50,4 +50,51 @@
 
 #include <iostream>
 using namespace std;
+#include <cmath>
+
+void printFibonacci(int n) {
+    long long a = 0, b = 1;
+    cout << "Fibonacci sequence: ";
+    for (int i = 0; i < n; i++) {
+        cout << a << " ";
+        long long next = a + b;
+        a = b;
+        b = next;
+    }
+    cout << endl;
+}
+
+bool isPerfectSquare(long long x) {
+    long long s = (long long)sqrt((double)x);
+    return (s * s == x) || ((s + 1) * (s + 1) == x);
+}
+
+bool isFibonacciNumber(int num) {
+    long long n = num;
+    return isPerfectSquare(5 * n * n + 4) || isPerfectSquare(5 * n * n - 4);
+}
+
+int main() {
+    int n;
+    cout << "How many terms? ";
+    cin >> n;
+
+    if (n <= 0) {
+        cout << "Error: N must be a positive integer." << endl;
+    } else {
+        printFibonacci(n);
+    }
+
+    int num;
+    cout << "Enter a number to check: ";
+    cin >> num;
+
+    if (isFibonacciNumber(num)) {
+        cout << num << " is a Fibonacci number." << endl;
+    } else {
+        cout << num << " is NOT a Fibonacci number." << endl;
+    }
+
+    return 0;
+}
 
