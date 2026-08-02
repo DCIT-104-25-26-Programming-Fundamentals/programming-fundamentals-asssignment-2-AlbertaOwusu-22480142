@@ -43,7 +43,7 @@
 using namespace std;
 
 
-// Function to calculate the sum of array elements
+
 int calculateSum(int arr[], int n) {
     int sum = 0;
     for (int i = 0; i < n; i++) {
@@ -52,13 +52,13 @@ int calculateSum(int arr[], int n) {
     return sum;
 }
 
-// Function to calculate the average of array elements
+
 double calculateAverage(int arr[], int n) {
     int sum = calculateSum(arr, n);
     return static_cast<double>(sum) / n;
 }
 
-// Function to find the maximum value in the array
+
 int findMaximum(int arr[], int n) {
     int max = arr[0];
     for (int i = 1; i < n; i++) {
@@ -69,7 +69,7 @@ int findMaximum(int arr[], int n) {
     return max;
 }
 
-// Function to find the minimum value in the array
+
 int findMinimum(int arr[], int n) {
     int min = arr[0];
     for (int i = 1; i < n; i++) {
